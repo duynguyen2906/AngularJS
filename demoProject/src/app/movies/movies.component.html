@@ -1,0 +1,35 @@
+<!-- <h1>Movies details:</h1>
+<div><span>id: </span>{{movie.id}}</div>
+<div><span>name: </span>{{movie.name}}</div>
+<div><span>releaseYear: </span>{{movie.releaseYear}}</div>
+<div> 
+
+    <input [ngModel]="movie.name" type="text" placeholder="Nhap ten film">
+</div>
+<div> 
+
+        <input [(ngModel)]="movie.name" type="text" placeholder="Nhap namphathanh">
+    </div> -->
+<h2>My favorite movies</h2>
+<div class="parent">
+    <ol class="movies">
+        <li class="moviesList" *ngFor="let eachMovie of movies" [class.selected]="eachMovie === selectedMovie" (click)="onSelectsss(eachMovie)">
+            {{eachMovie.name}} - {{eachMovie.releaseYear}}
+        </li>
+    </ol>
+    <div *ngIf="selectedMovie" class="details">
+        <h3>You selected: {{selectedMovie.name}}</h3>
+        <table>
+            <tr>
+                <td>name: </td>
+                <td><input [(ngModel)]="selectedMovie.name" /></td>
+            </tr>
+            <tr>
+                <td>Release Year: </td>
+                <td><input [(ngModel)]="selectedMovie.releaseYear" /></td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
