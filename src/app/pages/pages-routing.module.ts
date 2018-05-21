@@ -16,10 +16,10 @@ const routes: Routes = [{
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   },
-   {
-    path: 'components',
-    loadChildren: './components/components.module#ComponentsModule',
-   }, 
+  //  {
+  //   path: 'components',
+  //   loadChildren: './components/components.module#ComponentsModule',
+  //  }, 
   //{
   //   path: 'maps',
   //   loadChildren: './maps/maps.module#MapsModule',
@@ -48,7 +48,8 @@ const routes: Routes = [{
   // }, 
   {
     path: '**',
-    component: NotFoundComponent,
+    loadChildren: './forms/forms.module#FormsModule',
+    // component: NotFoundComponent,
   }],
 }];
 
