@@ -1,23 +1,21 @@
 <div class="row">
-  <div style="padding-left: 300px;">
+  <div class="col-md-6 offset-md-3">
     <nb-card>
       <nb-card-header>New Email</nb-card-header>
       <nb-card-body>
         <div class="input-group">
-          <input type="text" placeholder="Project" class="form-control"/>
-        </div>
-        <div class="row full-name-inputs">
-          <div class="col-sm-6 input-group">
-            <input type="text" placeholder="Nick" class="form-control"/>
-          </div>
-          <div class="col-sm-6 input-group">
-            <input type="text" placeholder="Last Name" class="form-control"/>
-          </div>
+          <input type="text" placeholder="Subject" class="form-control"/>
         </div>
         <div class="input-group">
-          <input type="password" placeholder="Password" class="form-control"/>
+          <input type="text" placeholder="Your Name" class="form-control"/>
         </div>
-        <div class="input-group has-person-icon">
+        <div class="input-group">
+          <input type="text" placeholder="Your Email" class="form-control"/>
+        </div>
+        <!-- <div class="input-group">
+          <input type="password" placeholder="Password" class="form-control"/>
+        </div> -->
+        <!-- <div class="input-group has-person-icon">
           <input type="text" placeholder="With Icon" class="form-control"/>
         </div>
         <div class="input-group input-group-rounded">
@@ -30,16 +28,11 @@
         </div>
         <div class="input-group">
           <input type="text" placeholder="Disabled input" class="form-control" disabled/>
-        </div>
+        </div> -->
         <div class="input-group">
-          <textarea rows="5" placeholder="Text Area" class="form-control"></textarea>
+          <textarea rows="5" placeholder="Your messages" class="form-control"></textarea>
         </div>
-        <div class="input-group input-group-sm">
-          <input type="text" placeholder="Small Input" class="form-control"/>
-        </div>
-        <div class="input-group input-group-lg">
-          <input type="text" placeholder="Large Input" class="form-control"/>
-        </div>
+        <button _ngcontent-c16="" class="btn btn-hero-danger btn-demo col-md-6 offset-md-3" ng-reflect-value="middle">Send</button>
       </nb-card-body>
     </nb-card>
 

@@ -38,10 +38,7 @@ export class SmartTableComponent {
         title: 'First Name',
         type: 'string',
       },
-      lastName: {
-        title: 'Last Name',
-        type: 'string',
-      },
+      
       username: {
         title: 'Username',
         type: 'string',
@@ -50,10 +47,7 @@ export class SmartTableComponent {
         title: 'E-mail',
         type: 'string',
       },
-      age: {
-        title: 'Age',
-        type: 'number',
-      },
+     
     },
   };
 

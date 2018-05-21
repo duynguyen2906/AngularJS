@@ -118,40 +118,41 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //     },
   //   ],
   // },
-//   {
-//     title: 'Editors',
-//     icon: 'nb-title',
-//     children: [
-//       {
-//         title: 'TinyMCE',
-//         link: '/pages/editors/tinymce',
-//       },
-//       {
-//         title: 'CKEditor',
-//         link: '/pages/editors/ckeditor',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'Tables',
-//     icon: 'nb-tables',
-//     children: [
-//       {
-//         title: 'Smart Table',
-//         link: '/pages/tables/smart-table',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'Miscellaneous',
-//     icon: 'nb-shuffle',
-//     children: [
-//       {
-//         title: '404',
-//         link: '/pages/miscellaneous/404',
-//       },
-//     ],
-//   },
+  // {
+  //   title: 'Editors',
+  //   icon: 'nb-title',
+  //   children: [
+  //     {
+  //       title: 'TinyMCE',
+  //       link: '/pages/editors/tinymce',
+  //     },
+  //     {
+  //       title: 'CKEditor',
+  //       link: '/pages/editors/ckeditor',
+  //     },
+  //   ],
+//  },
+  {
+    title: 'Your Request',
+    icon: 'nb-tables',
+    link: '/pages/tables/smart-table'
+    // children: [
+    //   {
+    //     title: 'Smart Table',
+    //     link: '/pages/tables/smart-table',
+    //   },
+    // ],
+  },
+  // {
+  //   title: 'Miscellaneous',
+  //   icon: 'nb-shuffle',
+  //   children: [
+  //     {
+  //       title: '404',
+  //       link: '/pages/miscellaneous/404',
+  //     },
+  //   ],
+  // },
 //   {
 //     title: 'Auth',
 //     icon: 'nb-locked',
