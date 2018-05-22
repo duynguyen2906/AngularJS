@@ -1,0 +1,84 @@
+{
+  "email": [
+    {
+      "id": 1,
+      "email": "The Ghost and the Darkness",
+      "mess": 1996
+    },
+    {
+      "releaseYear": "2009",
+      "email": "A Christmas Carol",
+      "mess": 2
+    },
+    {
+      "id": 3,
+      "email": "Star Wars",
+      "mess": "1977"
+    },
+    {
+      "id": 4,
+      "email": "Back to the Future",
+      "mess": 1985
+    },
+    {
+      "id": 5,
+      "email": "The Matrix",
+      "mess": 1999
+    },
+    {
+      "id": 6,
+      "email": "Inception",
+      "mess": 2010
+    },
+    {
+      "id": 7,
+      "email": "Freedom Writers",
+      "mess": 2007
+    },
+    {
+      "email": "duong@gmail.com",
+      "mess": "hello duong",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "mess": " hello duong",
+      "email": "duongname@gmail.com"
+    },
+    {
+      "id": 10,
+      "mess": " hello duong",
+      "email": "duongname@gmail.com"
+    },
+    {
+      "id": 11,
+      "mess": " hello duong",
+      "email": "duongname@gmail.com"
+    },
+    {
+      "id": 12,
+      "mess": " hello duong",
+      "email": "duongname@gmail.com"
+    },
+    {
+      "id": 13,
+      "mess": " hello duong",
+      "email": "duongname@gmail.com"
+    },
+    {
+      "id": 14,
+      "mess": "duong",
+      "email": "duong"
+    },
+    {
+      "id": 15,
+      "mess": "duong",
+      "email": "duong"
+    },
+    {
+      "id": 16,
+      "mess": "duong",
+      "email": "duong"
+    }
+  ]
+}

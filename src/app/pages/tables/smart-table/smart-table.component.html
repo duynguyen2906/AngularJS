@@ -1,4 +1,4 @@
-<nb-card>
+<!-- <nb-card>
   <nb-card-header>
     Your Request
   </nb-card-header>
@@ -7,4 +7,6 @@
     <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
     </ng2-smart-table>
   </nb-card-body>
-</nb-card>
+</nb-card> -->
+<button (click)="getPosts()">Get now</button>
+<div *ngFor="let email of emails | async">{{email|json}}</div>
