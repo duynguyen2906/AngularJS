@@ -1,12 +1,34 @@
-<!-- <nb-card>
+<nb-card>
   <nb-card-header>
     Your Request
   </nb-card-header>
 
   <nb-card-body>
-    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-    </ng2-smart-table>
+    <!-- <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table> -->
+    <table class="table table-bordered">
+        <thead class="text-center">
+          <tr  class="tableborder">
+            <th width="10%" class="item">ID</th>
+            <th width="20%" class="item" >Subject</th>
+            <th width="20%" class="item" >Name</th>
+            <th width="20%" class="item" >Email</th>
+            <th width="20%" class="item" >Messages</th>
+            <th width="10%" class="item" >Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let email of emails| async ">
+            <td width="10%" >{{email.id|json}}</td>
+            <td width="20%" >{{email.subject|json| slice:0:20}}</td>
+            <td width="20%" >{{email.name|json| slice:0:20}}</td>
+            <td width="20%">{{email.email|json| slice:0:20}}{{email.email.length < 20 ? '' : '...'}}</td>
+            <td width="20%" >{{email.messages|json| slice:0:20}}</td>
+            <td width="10%" ><button (click)="deleteEmail(email.id)" class="btn btn-outline-success btn-icon"><i class="ion-trash-a" ></i></button></td>
+          </tr>
+         
+        </tbody>
+      </table>
   </nb-card-body>
-</nb-card> -->
-<button (click)="getPosts()">Get now</button>
-<div *ngFor="let email of emails | async">{{email|json}}</div>
+</nb-card>
+

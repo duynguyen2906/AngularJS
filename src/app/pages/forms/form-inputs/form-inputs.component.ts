@@ -1,5 +1,5 @@
 import { ListMail } from './../../../@core/data/listmail';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Component,Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // import 'rxjs/add/operator/map';
@@ -28,10 +28,12 @@ export class FormInputsComponent {
   constructor(private http: HttpClient){
 
   }
-  createMail(Email: string,Messages:string){
+  createMail(Email: string,Messages:string,Name: string,Subject: string){
     const data: ListMail = {
       id: null,
-      mess: Messages,
+      name: Name,
+      subject: Subject,
+      messages: Messages,
       email: Email
     }
     //  console.log(data);

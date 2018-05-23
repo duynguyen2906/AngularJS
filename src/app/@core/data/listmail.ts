@@ -1,5 +1,7 @@
 export interface ListMail {
     id: number;
-    mess: string;
+    subject: string;
+    name: string;
+    messages: string;
     email: string;
 }
