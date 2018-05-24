@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let email of emails| async ">
+          <tr *ngFor="let email of emails ">
             <td width="10%" >{{email.id|json}}</td>
             <td width="20%" >{{email.subject|json| slice:0:20}}</td>
             <td width="20%" >{{email.name|json| slice:0:20}}</td>

@@ -1,10 +1,20 @@
+import { SmartTableService } from './../../../@core/data/smart-table.service';
 import { Observable } from 'rxjs';
 import { ListMail } from './../../../@core/data/listmail';
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { HttpClient } from '@angular/common/http';
-import { SmartTableService } from '../../../@core/data/smart-table.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
+import { RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import { Response } from '@angular/http';
+import { Headers } from '@angular/http'
+import { of } from 'rxjs/observable/of';
+import { catchError, map, tap, filter } from 'rxjs/operators';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
@@ -24,6 +34,7 @@ import 'rxjs/add/operator/toPromise';
     }
   `],
 })
+
 
 export class SmartTableComponent {
 
@@ -64,11 +75,10 @@ export class SmartTableComponent {
     },
   };
 
-  // source: LocalDataSource = new LocalDataSource();
+
   readonly ROOT_URL="http://localhost:3000/email"
   emails: Observable<any>;
   newEmails: Observable<any>;
-
   
 
   constructor(private service: SmartTableService,private http: HttpClient) {
@@ -77,12 +87,19 @@ export class SmartTableComponent {
 
   }
   deleteEmail(id:number){
-    this.emails=this.http.delete(`${this.ROOT_URL}/${id}`);
-
-  
+    if (confirm('Are you sure you want to delete this?')) {
+      this.http.delete<any>(this.ROOT_URL+"/"+id,httpOptions).subscribe(value => {
+        this.emails=this.emails.filter(filterID => filterID.id !== id); // update when delete
+        alert("Deleted!")
+      });
+    }
+   
+   
+     
   }
+
   getData(){
-    return this.emails = this.http.get(this.ROOT_URL);
+    return this.http.get<any>(this.ROOT_URL).subscribe(value => {this.emails=value});
   }
 
 }

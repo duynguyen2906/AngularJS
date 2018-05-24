@@ -37,7 +37,7 @@ export class FormInputsComponent {
       email: Email
     }
     //  console.log(data);
-    this.newEmail = this.http.post(this.ROOT_URL,data);
+     this.http.post<any>(this.ROOT_URL,data).subscribe(value => {this.newEmail=value;alert("Your Mail is Sending...!")});
   }
  
 }
