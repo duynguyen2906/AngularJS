@@ -1,20 +1,10 @@
-import { SmartTableService } from './../../../@core/data/smart-table.service';
+import { ListmailService } from './../../../listmail.service';
 import { Observable } from 'rxjs';
 import { ListMail } from './../../../@core/data/listmail';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import 'rxjs/add/operator/toPromise';
-import { RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import { Response } from '@angular/http';
-import { Headers } from '@angular/http'
-import { of } from 'rxjs/observable/of';
-import { catchError, map, tap, filter } from 'rxjs/operators';
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
@@ -36,7 +26,7 @@ const httpOptions = {
 })
 
 
-export class SmartTableComponent {
+export class SmartTableComponent implements OnInit {
 
   settings = {
     add: {
@@ -74,32 +64,21 @@ export class SmartTableComponent {
      
     },
   };
-
-
-  readonly ROOT_URL="http://localhost:3000/email"
   emails: Observable<any>;
-  newEmails: Observable<any>;
-  
+  constructor(private service: ListmailService,private http: HttpClient) {
 
-  constructor(private service: SmartTableService,private http: HttpClient) {
-
-   this.getData();
-
+   
   }
-  deleteEmail(id:number){
-    if (confirm('Are you sure you want to delete this?')) {
-      this.http.delete<any>(this.ROOT_URL+"/"+id,httpOptions).subscribe(value => {
-        this.emails=this.emails.filter(filterID => filterID.id !== id); // update when delete
+  ngOnInit(){
+
+    this.service.getData().subscribe(value => {this.emails=value});
+  }
+  deleteEmail(id:number): void{
+    this.service.deleteEmail(id).subscribe(value => {
+      this.emails= this.emails.filter(filterID => filterID.id !== id); // update when delete
         alert("Deleted!")
-      });
-    }
-   
-   
-     
+      });;
   }
-
-  getData(){
-    return this.http.get<any>(this.ROOT_URL).subscribe(value => {this.emails=value});
-  }
+ 
 
 }

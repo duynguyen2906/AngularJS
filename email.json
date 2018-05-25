@@ -2,24 +2,24 @@
   "email": [
     {
       "id": 1,
-      "name": "aaa",
-      "subject": "aaa",
-      "messages": "aaa",
-      "email": "aaa"
+      "name": "Nguyen",
+      "subject": "This is subject",
+      "messages": "duong",
+      "email": "duong"
     },
     {
       "id": 2,
-      "name": "aaa",
-      "subject": "aaaaaa",
-      "messages": "aaa",
-      "email": "aaa"
+      "name": "Pinô",
+      "subject": "test mail",
+      "messages": "aaaa",
+      "email": "duong@duong.com"
     },
     {
       "id": 3,
-      "name": "Pinô",
-      "subject": "aaa",
-      "messages": "edd",
-      "email": "ss@a"
+      "name": "namduong",
+      "subject": "duong",
+      "messages": "namduong",
+      "email": "namduong@gmail.co"
     }
   ]
 }

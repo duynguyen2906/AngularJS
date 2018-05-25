@@ -1,4 +1,4 @@
-<form>
+<form  #myForm="ngForm">
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <nb-card>
@@ -13,14 +13,14 @@
         </div>
         <div class="alert alert-danger" *ngIf="!name.valid&&name.touched">Please Enter Your Name!</div>
         <div class="input-group">
-          <input required ngModel #email="ngModel" (change)="log(email)" name="email" id="email" type="text" placeholder="Your Email" class="form-control"/>
+          <input required ngModel #email="ngModel" email pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" (change)="log(email)" name="email" id="email" type="email" placeholder="Your Email" class="form-control"/>
         </div>
-        <div class="alert alert-danger" *ngIf="!email.valid&&email.touched">Please Enter Your Email!</div>
+        <div class="alert alert-danger" *ngIf="!email.valid&&email.touched">Email invalid!</div>
         <div class="input-group">
           <textarea required ngModel #message="ngModel" (change)="log(message)" name="message" id="message" rows="5" placeholder="Your messages" class="form-control"></textarea>
         </div>
         <div class="alert alert-danger" *ngIf="!message.valid&&message.touched">Please Enter Messages!</div>
-        <button (click)="createMail(email.value,message.value,name.value,subject.value)" _ngcontent-c16="" class="btn btn-hero-danger btn-demo col-md-6 offset-md-3" ng-reflect-value="middle">Send</button>
+        <button [disabled]="!myForm.valid" (click)="creatMailFromService(email.value,message.value,name.value,subject.value)" _ngcontent-c16="" class="btn btn-hero-danger btn-demo col-md-6 offset-md-3" ng-reflect-value="middle">Send</button>
       </nb-card-body>
     </nb-card>
 
