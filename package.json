@@ -28,7 +28,11 @@
     "prepush": "npm run lint:ci",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
+  "postinstall": "ng build --aot -prod",
   "dependencies": {
+     "typescript": "2.7.2",
+    "@angular/cli": "6.0.0",
+    "@angular/compiler-cli": "6.0.0",
     "@agm/core": "1.0.0-beta.2",
     "@angular/animations": "6.0.0",
     "@angular/common": "6.0.0",
