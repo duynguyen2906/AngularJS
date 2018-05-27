@@ -27,7 +27,7 @@
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "prepush": "npm run lint:ci",
     "postinstall": "ng build --aot -prod",
-    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
+    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "deploy": "git push origin master && git push heroku master"
   },
  
