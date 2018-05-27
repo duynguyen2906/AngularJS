@@ -21,5 +21,23 @@
       "messages": "namduong",
       "email": "namduong@gmail.co"
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "Duong",
+      "password": "123456"
+      
+    },
+    {
+      "id": 2,
+      "username": "Duong",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "username": "Duong",
+      "password": "123456"
+    }
   ]
 }
