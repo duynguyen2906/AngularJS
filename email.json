@@ -27,17 +27,31 @@
       "id": 1,
       "username": "Duong",
       "password": "123456"
-      
     },
     {
       "id": 2,
       "username": "Duong",
-      "password": "123456"
+      "password": "12345"
     },
     {
       "id": 3,
       "username": "Duong",
-      "password": "123456"
+      "password": "1234"
+    },
+    {
+      "id": 4,
+      "username": "duon",
+      "password": "duong"
+    },
+    {
+      "id": 5,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 6,
+      "username": "adminddd",
+      "password": "admindd"
     }
   ]
 }

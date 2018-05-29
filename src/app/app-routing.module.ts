@@ -11,9 +11,10 @@ import {
 } from '@nebular/auth';
 import { AuthComponent } from './auth/auth.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { AuthRoleGuard } from './auth-role/auth-role.guard';
 
 const routes: Routes = [
-  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
+  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule',canActivate:[AuthRoleGuard] },
   // { path: 'login', component: AuthComponent },
   // {
   //   path: 'auth',

@@ -1,3 +1,4 @@
+import { AuthRoleGuard } from './auth-role/auth-role.guard';
 /**
  * @license
  * Copyright Akveo. All Rights Reserved.
@@ -32,8 +33,8 @@ import { RegisterComponent } from './auth/register/register.component';
   ],
   bootstrap: [AppComponent],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
-  ],
+    { provide: APP_BASE_HREF, useValue: '/' },AuthRoleGuard
+  ]
 })
 export class AppModule {
 }
