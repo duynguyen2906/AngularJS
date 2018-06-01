@@ -2,7 +2,7 @@ import { of } from 'rxjs/observable/of';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/filter';
-import { ListMail } from './@core/data/listmail';
+import { ListMail, IListMail } from './@core/data/listmail';
 import { Injectable } from '@angular/core';
 import { catchError, map, tap, filter } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ListmailService {
-  readonly ROOT_URL = "http://localhost:3000/email"
+  readonly ROOT_URL = "http://localhost:52044/api/EMAILS"
   emails: Observable<any>;
   constructor(private http: HttpClient) { }
 

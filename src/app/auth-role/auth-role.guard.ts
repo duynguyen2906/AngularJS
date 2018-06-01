@@ -10,9 +10,9 @@ export class AuthRoleGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot):  boolean {
     
-    if(this.flag==false)
-    return true; // cho phep vao
-    this.router.navigate(['/login']);
-    return false; // chuyen sang login
+    // if(this.flag==false)
+    // return true; // cho phep vao
+    // this.router.navigate(['/login']);
+    return true; //
   }
 }

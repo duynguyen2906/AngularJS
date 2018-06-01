@@ -22,7 +22,7 @@
             <td width="10%" >{{email.id|json}}</td>
             <td width="20%" >{{email.subject|json| slice:0:20}}</td>
             <td width="20%" >{{email.name|json| slice:0:20}}</td>
-            <td width="20%">{{email.email|json| slice:0:20}}{{email.email.length < 20 ? '' : '...'}}</td>
+            <td width="20%">{{email.email|json| slice:0:20}}</td>
             <td width="20%" >{{email.messages|json| slice:0:20}}</td>
             <td width="10%" ><button (click)="deleteEmail(email.id)" class="btn btn-outline-success btn-icon"><i class="ion-trash-a" ></i></button></td>
           </tr>

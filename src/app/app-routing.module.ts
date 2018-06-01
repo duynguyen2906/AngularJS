@@ -14,9 +14,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AuthRoleGuard } from './auth-role/auth-role.guard';
 
 const routes: Routes = [
-  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule',canActivate:[AuthRoleGuard] },
+  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
   // { path: 'login', component: AuthComponent },
-  // {
+  // {,canActivate:[AuthRoleGuard]
   //   path: 'auth',
   //   component: NbAuthComponent,
   //   children: [
@@ -71,7 +71,7 @@ const routes: Routes = [
 ];
 
 const config: ExtraOptions = {
-  useHash: false, // hash # in url
+  useHash: true, // hash # in url
 };
 
 @NgModule({

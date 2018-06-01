@@ -1,6 +1,6 @@
 import { ListmailService } from './../../../listmail.service';
 import { Observable } from 'rxjs';
-import { ListMail } from './../../../@core/data/listmail';
+import { ListMail, IListMail } from './../../../@core/data/listmail';
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
